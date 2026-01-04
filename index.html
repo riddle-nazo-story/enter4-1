@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>HACKING TERMINAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- タイマー -->
+  <div class="timer-panel">
+    <div class="timer-status">残りの制限時間</div>
+    <div class="progress-wrap">
+      <div id="timeBar"></div>
+    </div>
+    <div id="timeText">20:00</div>
+  </div>
+
+  <!-- 端末 -->
+  <div class="terminal">
+
+    <!-- 問題画像 -->
+    <img id="questionImage" class="question-image" alt="question">
+
+    <!-- ログ -->
+    <div id="log" class="log"></div>
+
+    <!-- 判定メッセージ -->
+    <div id="message" class="message"></div>
+
+    <!-- 入力 -->
+    <input id="answer" placeholder="ひらがなで入力">
+    <button id="executeBtn">判定</button>
+
+  </div>
+</div>
+
+<!-- エラー画面 -->
+<div id="errorScreen" class="noise">
+  <h1>ERROR</h1>
+  <p>不正な操作を検知しました</p>
+  <p>［LINEに【とらっぷ】と送信しろ。］</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

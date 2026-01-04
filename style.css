@@ -1,0 +1,145 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #020409;
+  color: #e6f1ff;
+  font-family: system-ui, monospace;
+}
+
+/* ===== レイアウト ===== */
+.container {
+  min-height: 100dvh;
+  padding: 16px;
+}
+
+/* ===== タイマー ===== */
+.timer-panel {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #0b0f1a, #05070c);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.timer-status {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.progress-wrap {
+  margin-top: 10px;
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#timeBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #6ea8ff, #5ef1c5);
+  transition: width 0.3s linear;
+}
+
+#timeText {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* ===== 端末 ===== */
+.terminal {
+  background: #05070c;
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== 問題画像 ===== */
+.question-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ===== ログ ===== */
+.log {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== 判定 ===== */
+.message {
+  margin-top: 10px;
+  min-height: 1.4em;
+  font-size: 1rem;
+}
+
+.message.correct {
+  color: #5ef1c5;
+}
+
+.message.wrong {
+  color: #ff6b6b;
+}
+
+/* ===== 入力 ===== */
+input {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0e1422;
+  color: #fff;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* ===== エラー画面 ===== */
+#errorScreen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: red;
+  color: white;
+  z-index: 999;
+  text-align: center;
+  padding: 40px 20px;
+  animation: blink 0.15s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.7; }
+}
+
+.noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
