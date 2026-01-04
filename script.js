@@ -53,7 +53,7 @@ function updateTimer() {
 /* ===== 問題表示 ===== */
 function showQuestion() {
   img.src = images[current];
-  log.textContent = `問題${current}：画像の問題を解け。`;
+  log.textContent = `問題：画像の問題を解け。`;
   message.textContent = "";
   message.className = "message";
 }
