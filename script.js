@@ -73,7 +73,7 @@ function submitAnswer() {
     current++;
 
     if (current >= answers.length) {
-      log.textContent = "全問正解。スタッフであると認証されました。［LINEに【とっぱ】と送信してください。］";
+      log.textContent = "全問正解。スタッフであると認証されました。";
       img.style.display = "none";
       return;
     }
@@ -90,4 +90,5 @@ function submitAnswer() {
 /* ===== エラー ===== */
 function triggerError() {
   errorScreen.style.display = "block";
+
 }
